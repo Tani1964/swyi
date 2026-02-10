@@ -84,7 +84,7 @@ const Home = () => {
   return (
     <div className="space-y-20 -mt-4 pb-20">
       {/* Hero with background slider */}
-      <section className="relative overflow-hidden min-h-[78vh] flex items-center py-12 md:py-16 lg:py-20">
+      <section className="relative overflow-hidden min-h-[60vh] sm:min-h-[70vh] md:min-h-[78vh] flex items-center py-12 md:py-16 lg:py-20">
         {heroSlides.map((image, idx) => (
           <div
             key={image}
@@ -96,7 +96,7 @@ const Home = () => {
                 "linear-gradient(120deg, rgba(12,23,77,0.78), rgba(12,23,77,0.35)), " +
                 `url(${image})`,
               backgroundSize: "cover",
-              backgroundPosition: "center",
+              backgroundPosition: "center 30%",
             }}
           />
         ))}
