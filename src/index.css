@@ -1,0 +1,100 @@
+@import "tailwindcss";
+
+:root {
+  --font-body: "Space Grotesk", "Inter", system-ui, -apple-system, sans-serif;
+  --font-display: "Playfair Display", "Georgia", serif;
+  --brand-deep: #0c174d; /* SWYI primary */
+  --brand-accent: #dd9933; /* SWYI secondary */
+  --brand-electric: #4f67b8; /* cool highlight pairing with primary */
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-body);
+  line-height: 1.6;
+  background:
+    radial-gradient(circle at 20% 20%, rgba(13, 30, 92, 0.22), transparent 30%),
+    radial-gradient(
+      circle at 75% 10%,
+      rgba(221, 153, 51, 0.12),
+      transparent 34%
+    ),
+    var(--brand-deep);
+  color: #e2e8f0;
+}
+
+p {
+  margin: 0 0 0.5rem;
+  line-height: 1.65;
+}
+
+p:last-child {
+  margin-bottom: 0;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--font-display);
+  letter-spacing: -0.02em;
+}
+
+a {
+  color: inherit;
+}
+
+.section-shell {
+  max-width: 1180px;
+  margin: 5 auto;
+  padding: 0 1.5rem;
+}
+
+.glass-panel {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 18px 42px rgba(0, 0, 0, 0.35);
+  border-radius: 24px;
+  backdrop-filter: blur(10px);
+}
+
+.button-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.85rem 1.4rem;
+  border-radius: 999px;
+  background: linear-gradient(120deg, var(--brand-accent), #c87f24);
+  color: #0c174d;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+  box-shadow: 0 12px 30px rgba(221, 153, 51, 0.35);
+}
+
+.button-ghost {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.8rem 1.25rem;
+  border-radius: 999px;
+  border: 1px solid rgba(221, 153, 51, 0.4);
+  color: #e2e8f0;
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.75rem;
+}
+
+.section-kicker {
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  color: #94a3b8;
+  font-size: 0.9rem;
+  font-weight: 700;
+}
